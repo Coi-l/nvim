@@ -101,6 +101,7 @@ set nowrap
 
 " enable syntax highlighting
 syntax enable
+set bg=dark
 
 " always display the status line
 set laststatus=2
@@ -173,8 +174,8 @@ nmap <S-Tab> :wincmd W <CR>
 map <Leader>d :bd! <CR>
 
 "step through buffers
-map <C-n> :bn! <CR>
-map <C-b> :bp! <CR>
+map <C-m> :bn! <CR>
+map <C-n> :bp! <CR>
 
 " move current line up or down
 nmap <C-j> :m+<CR>
