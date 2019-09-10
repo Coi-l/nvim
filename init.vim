@@ -13,7 +13,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 "tagbar requires ctags, use universal ctags https://ctags.io/
 Plug 'majutsushi/tagbar'
@@ -21,6 +20,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 "Plug 'vim-scripts/YankRing.vim'
 Plug 'w0rp/ale'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'moll/vim-bbye'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -169,9 +171,11 @@ map <F12> :so $MYVIMRC <CR> :echo "Reloaded" $MYVIMRC <CR>
 
 nmap <Tab> :wincmd w <CR>
 nmap <S-Tab> :wincmd W <CR>
+nmap <C-p> :Files <CR>
 
 " shortcut for closing buffers
-map <Leader>d :bd! <CR>
+:nnoremap <Leader>q :Bdelete<CR>
+:nnoremap <Leader>d :Bdelete!<CR>
 
 "step through buffers
 map <C-m> :bn! <CR>
@@ -190,6 +194,7 @@ nmap <C-h> <<
 "move the current selected visual block left or right
 vmap <C-l> >gv
 vmap <C-h> <gv
+
 
 "-----------------
 " AUTOCOMMANDS
